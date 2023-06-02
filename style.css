@@ -42,7 +42,7 @@ header .topright nav ul {
 }
 header .topright nav ul li {
   list-style-type: none;
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 header .topright nav ul li a {
   text-decoration: none;
