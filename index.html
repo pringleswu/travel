@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>密蘇里州旅遊網</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topleft">
+        <img src="./icons8-around-the-globe-100.png" alt="旅遊網logo" />
+        <h5>密蘇里州旅遊網</h5>
+      </div>
+      <div class="topright">
+        <nav>
+          <ul>
+            <li><a href="">必遊景點</a></li>
+            <li><a href="">美食介紹</a></li>
+            <li><a href="">行程規劃</a></li>
+            <li><a href="">聯絡我們</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <section class="background-img">
+        <div class="filter"></div>
+        <h3>歡迎來到美國密蘇里州</br>(Show Me State)</h3>
+      </section>
+      <section class="recommend">
+        <h4>推薦景點</h4>
+        <div class="places">
+          <div class="place">
+          <img src="./arch400.jpg">
+          <p>聖路易市地標拱門</p>
+        </div>
+        <div class="place">
+          <img src="./mu400.jpg">
+          <p>密蘇里大學哥倫比亞分校</p>
+        </div>
+        <div class="place">
+          <img src="./busch400.jpg">
+          <p>聖路易紅雀隊主場</p>
+        </div>
+        <div class="place">
+          <img src="./ozark400.jpg">
+          <p>歐紮克湖光美景</p>
+        </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      setInterval(() => {
+        let topBackground = document.querySelector("section.background-img");
+        if (
+          topBackground.style.backgroundImage == 'url("./stlouisnight.jpg")'
+        ) {
+          topBackground.style.backgroundImage = 'url("./mu.jpg")';
+        } else if (topBackground.style.backgroundImage == 'url("./mu.jpg")') {
+          topBackground.style.backgroundImage = 'url("./rocks-bridge.jpg")';
+        } else {
+          topBackground.style.backgroundImage = 'url("./stlouisnight.jpg")';
+        }
+      }, 3000);
+    </script>
+  </body>
+</html>
