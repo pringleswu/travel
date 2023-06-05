@@ -11,44 +11,55 @@
   font-family: "myfont", sans-serif;
 }
 
-header {
+body {
+  position: relative;
+}
+body .background-image {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -5;
+  bottom: 0;
+  left: 0;
+}
+body header {
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
 }
-header .topleft {
+body header .topleft {
   display: flex;
   flex-wrap: wrap;
-  flex: 3 1 500px;
   align-items: center;
 }
-header .topleft img {
+body header .topleft img {
   margin: 0.1rem;
   width: 50px;
 }
-header .topright {
+body header .topright {
   display: flex;
   flex-wrap: wrap;
-  flex: 9 1 500px;
 }
-header .topright nav {
+body header .topright nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-header .topright nav ul {
+body header .topright nav ul {
+  width: 80vw;
   display: flex;
-  justify-content: space-evenly;
+  align-items: end;
+  justify-content: end;
   flex: wrap;
 }
-header .topright nav ul li {
+body header .topright nav ul li {
   list-style-type: none;
-  padding: 0.5rem;
+  padding: 0 2rem;
 }
-header .topright nav ul li a {
+body header .topright nav ul li a {
   text-decoration: none;
 }
-
-main section.background-img {
+body main section.background-img {
   min-height: 70vh;
   background-image: url(./stlouisnight.jpg);
   background-size: cover;
@@ -60,7 +71,7 @@ main section.background-img {
   align-items: center;
   z-index: 0;
 }
-main div.filter {
+body main div.filter {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   min-height: 70vh;
@@ -69,36 +80,77 @@ main div.filter {
   left: 0;
   z-index: -1;
 }
-main h3 {
+body main h3 {
   color: white;
   font-size: 2rem;
 }
-
-.recommend {
+body main .recommend {
   background-color: white;
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
   text-align: center;
 }
-.recommend div.places {
+body main .recommend div.places {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-.recommend div.places div.place {
+body main .recommend div.places div.place {
   padding: 1rem;
   flex: 0 1 250px;
 }
-.recommend div.places div.place img {
+body main .recommend div.places div.place img {
   width: 80%;
   border-radius: 50%;
   padding: 0.3rem;
   transition: all 0.3s ease-in;
 }
-.recommend div.places div.place img:hover {
+body main .recommend div.places div.place img:hover {
   border: 3px solid rgba(160, 3, 115, 0.5);
 }
-.recommend div.places div.place p {
+body main .recommend div.places div.place p {
   font-size: 16pt;
+}
+body main section.slogan {
+  display: flex;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+body main .google-map {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+body main .google-map h4 {
+  margin: 1rem;
+  color: black;
+}
+body footer {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body footer .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body footer .logo img {
+  width: 100px;
+}
+body footer .logo h3 {
+  size-font: 20pt;
+  color: white;
+}
+body footer .link {
+  display: flex;
+  justify-content: center;
+}
+body footer .link a img {
+  margin: 1rem 2rem;
 }/*# sourceMappingURL=style.css.map */

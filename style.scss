@@ -10,96 +10,158 @@ $themeColor: rgba(160, 3, 115, 0.5);
   font-size: 1.5rem;
   font-family: "myfont", sans-serif;
 }
-header {
-  display: flex;
-  flex-wrap: wrap;
-  .topleft {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 3 1 500px;
-    align-items: center;
-    img {
-      margin: 0.1rem;
-      width: 50px;
-    }
+body{
+  position: relative;
+
+  .background-image{
+    min-height:100vh;
+    width:100%;
+    position: fixed;
+    z-index: -5;
+    bottom: 0;
+    left:0;
   }
-  .topright {
+  header {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
-    flex: 9 1 500px;
-    nav {
+    .topleft {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      ul {
+      img {
+        margin: 0.1rem;
+        width: 50px;
+      }
+    }
+    .topright {
+      display: flex;
+      flex-wrap: wrap;
+      nav {
         display: flex;
-        justify-content: space-evenly;
-        flex: wrap;
-        li {
-          list-style-type: none;
-          padding:0.5rem;
-          a {
-            text-decoration: none;
+        flex-wrap: wrap;
+        align-items: center;
+        ul {
+          width:80vw;
+          // border: 3px solid black;
+          display: flex;
+          align-items: end;
+          justify-content:end;
+          flex: wrap;
+          li {
+            list-style-type: none;
+            padding:0 2rem;
+            a {
+              text-decoration: none;
+              }
             }
           }
         }
       }
     }
-  }
-main {
-  section.background-img {
   
-    min-height: 70vh;
-    background-image: url(./stlouisnight.jpg);
-    background-size: cover;
-    background-position: center;
-    transition: all 0.5s ease;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-  }
-  div.filter {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    min-height: 70vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index:-1;
-    ;
-  }
-  h3 {
-    color: white;
-    font-size: 2rem;
-  }
-}
-.recommend{
-    background-color: white;
-    display:flex;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    text-align: center;
-    div.places{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-      div.place{
-      padding: 1rem;
-      flex:0 1 250px;
-        img{
-        width:80%;
-        border-radius: 50%;
-        padding: 0.3rem;
-        transition: all 0.3s ease-in;
-        &:hover { 
-          border: 3px solid $themeColor;
+    main {
+      section.background-img {
+      
+        min-height: 70vh;
+        background-image: url(./stlouisnight.jpg);
+        background-size: cover;
+        background-position: center;
+        transition: all 0.5s ease;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+      }
+      div.filter {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        min-height: 70vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index:-1;
+        ;
+      }
+      h3 {
+        color: white;
+        font-size: 2rem;
+      }
+    .recommend{
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+        div.places{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+          div.place{
+          padding: 1rem;
+          flex:0 1 250px;
+            img{
+            width:80%;
+            border-radius: 50%;
+            padding: 0.3rem;
+            transition: all 0.3s ease-in;
+            &:hover { 
+              border: 3px solid $themeColor;
+            }
+          }
+          p{
+            font-size: 16pt;
+          }
         }
       }
-      p{
-        font-size: 16pt;
+     }
+    section.slogan{
+      display: flex;
+      height:70vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+
+     }
+    .google-map{
+
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+
+      h4{
+        margin:1rem;
+        color: black;
+      }
+    }
+    }
+footer{
+  background-color: rgba(0, 0, 0, 0.7);
+  .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width:100px;
+    }
+    h3{
+      size-font:20pt;
+      color:white;
+    }
+  }
+  .link{
+display:flex;
+justify-content: center;
+    a{
+      img{
+      margin: 1rem 2rem;
       }
     }
   }
- }
+}
+}
